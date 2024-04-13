@@ -1,5 +1,6 @@
 ﻿using BarberiApp.WebApi.Interface;
 using BarberiApp.WebApi.Models;
+using BarberiAppNegocio.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
