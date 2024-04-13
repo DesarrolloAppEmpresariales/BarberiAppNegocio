@@ -1,5 +1,4 @@
-﻿using BarberiApp.WebApi.Models;
-using BarberiApp.WebApi.Models;
+﻿using BarberiAppNegocio.Models;
 
 namespace BarberiApp.WebApi.Interface
 {

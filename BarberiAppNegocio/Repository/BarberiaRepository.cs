@@ -1,24 +1,24 @@
-﻿using BarberiApp.WebApi.Interface;
-using BarberiApp.WebApi.Models;
+﻿using BarberiApp.WebApi.Models;
+using BarberiAppNegocio.Interface;
 using BarberiAppNegocio.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace BarberiApp.WebApi.Repository
+namespace BarberiAppNegocio.Repository
 {
-    public class CitaRepository : ICita
+    public class BarberiaRepository: IBarberia
     {
         readonly DatabaseContext _dbContext = new();
 
-        public CitaRepository(DatabaseContext dbContext)
+        public BarberiaRepository(DatabaseContext dbContext)
         {
             _dbContext = dbContext;
         }
 
-        public List<Cita> ObtenerListaCitas()
+        public List<Barberia> ObtenerListaBarberias()
         {
             try
             {
-                return _dbContext.Cita.ToList();
+                return _dbContext.Barberia.ToList();
             }
             catch
             {
@@ -26,14 +26,14 @@ namespace BarberiApp.WebApi.Repository
             }
         }
 
-        public Cita ObtenerCitaPorId(int id)
+        public Barberia ObtenerBarberiaPorId(int id)
         {
             try
             {
-                Cita? cita = _dbContext.Cita.Find(id);
-                if (cita != null)
+                Barberia? barberia = _dbContext.Barberia.Find(id);
+                if (barberia != null)
                 {
-                    return cita;
+                    return barberia;
                 }
                 else
                 {
@@ -46,11 +46,11 @@ namespace BarberiApp.WebApi.Repository
             }
         }
 
-        public void CrearCita(Cita cita)
+        public void CrearBarberia(Barberia barberia)
         {
             try
             {
-                _dbContext.Cita.Add(cita);
+                _dbContext.Barberia.Add(barberia);
                 _dbContext.SaveChanges();
             }
             catch
@@ -59,11 +59,11 @@ namespace BarberiApp.WebApi.Repository
             }
         }
 
-        public void ActualizarCita(Cita cita)
+        public void ActualizarBarberia(Barberia barberia)
         {
             try
             {
-                _dbContext.Entry(cita).State = EntityState.Modified;
+                _dbContext.Entry(barberia).State = EntityState.Modified;
                 _dbContext.SaveChanges();
             }
             catch
@@ -72,17 +72,17 @@ namespace BarberiApp.WebApi.Repository
             }
         }
 
-        public Cita EliminarCita(int id)
+        public Barberia EliminarBarberia(int id)
         {
             try
             {
-                Cita? cita = _dbContext.Cita.Find(id);
+                Barberia? barberia = _dbContext.Barberia.Find(id);
 
-                if (cita != null)
+                if (barberia != null)
                 {
-                    _dbContext.Cita.Remove(cita);
+                    _dbContext.Barberia.Remove(barberia);
                     _dbContext.SaveChanges();
-                    return cita;
+                    return barberia;
                 }
                 else
                 {
@@ -95,9 +95,9 @@ namespace BarberiApp.WebApi.Repository
             }
         }
 
-        public bool ValidarCita(int id)
+        public bool ValidarBarberia(int id)
         {
-            return _dbContext.Cita.Any(e => e.CitaID == id);
+            return _dbContext.Barberia.Any(e => e.Id == id);
         }
     }
 }
