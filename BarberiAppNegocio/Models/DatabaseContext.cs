@@ -17,6 +17,7 @@ namespace BarberiApp.WebApi.Models
 
         public virtual DbSet<Cita>? Cita { get; set; }
         public virtual DbSet<Barberia> Barberia { get; set; }
+        public virtual DbSet<Servicio>? Servicio { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -44,6 +45,19 @@ namespace BarberiApp.WebApi.Models
                 entity.Property(e => e.ProductoId).HasColumnName("ProductoId").HasMaxLength(4).IsUnicode(false);
                 entity.Property(e => e.AdministradorNegocioId).HasColumnName("AdministradorNegocioId").HasMaxLength(4).IsUnicode(false);
                 entity.Property(e => e.EmpleadoBarberiaId).HasColumnName("EmpleadoBarberiaId").HasMaxLength(4).IsUnicode(false);
+            });
+
+            modelBuilder.Entity<Servicio>(entity =>
+            {
+                entity.ToTable("Servicios");
+                entity.Property(e => e.ServicioId).HasColumnName("Id");
+                entity.Property(e => e.Fecha).HasMaxLength(10).IsUnicode(false);
+                entity.Property(e => e.Hora).HasMaxLength(10).IsUnicode(false);
+                entity.Property(e => e.Estado).HasMaxLength(20).IsUnicode(false);
+                entity.Property(e => e.Tipo).HasMaxLength(50).IsUnicode(false);
+                entity.Property(e => e.Estado).HasMaxLength(20).IsUnicode(false);
+                entity.Property(e => e.Precio).HasMaxLength(20).IsUnicode(false);
+                entity.Property(e => e.BarberiaId).HasColumnName("Barberia_Id").HasMaxLength(5).IsUnicode(false);
             });
 
 
