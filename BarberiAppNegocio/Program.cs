@@ -18,6 +18,7 @@ builder.Services.AddDbContext<DatabaseContext>
     (options => options.UseSqlServer(builder.Configuration.GetConnectionString("dbConnection")));
 builder.Services.AddTransient<ICita, CitaRepository>();
 builder.Services.AddTransient<IBarberia, BarberiaRepository>();
+builder.Services.AddTransient<IServicio, ServicioRepository>();
 builder.Services.AddControllers();
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
 {

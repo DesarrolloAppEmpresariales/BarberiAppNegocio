@@ -29,7 +29,8 @@ namespace BarberiApp.WebApi.Models
                 entity.Property(e => e.Fecha).HasMaxLength(10).IsUnicode(false);
                 entity.Property(e => e.Hora).HasMaxLength(10).IsUnicode(false);
                 entity.Property(e => e.Estado).HasMaxLength(10).IsUnicode(false);
-                entity.Property(e => e.ClienteId).HasColumnName("cliente_id").HasMaxLength(5).IsUnicode(false);
+                entity.Property(e => e.ClienteId).HasColumnName("Cliente_id").HasMaxLength(5).IsUnicode(false);
+                entity.Property(e => e.BarberiaId).HasColumnName("Barberia_id").HasMaxLength(5).IsUnicode(false);
             });
 
             modelBuilder.Entity<Barberia>(entity =>
