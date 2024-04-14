@@ -51,7 +51,7 @@ namespace BarberiApp.WebApi.Models
             modelBuilder.Entity<Servicio>(entity =>
             {
                 entity.ToTable("Servicios");
-                entity.Property(e => e.ServicioId).HasColumnName("Id");
+                entity.Property(e => e.ServicioID).HasColumnName("Id");
                 entity.Property(e => e.Fecha).HasMaxLength(10).IsUnicode(false);
                 entity.Property(e => e.Hora).HasMaxLength(10).IsUnicode(false);
                 entity.Property(e => e.Estado).HasMaxLength(20).IsUnicode(false);
