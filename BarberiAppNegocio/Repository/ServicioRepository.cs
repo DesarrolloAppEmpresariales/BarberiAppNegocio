@@ -1,5 +1,4 @@
-﻿using BarberiApp.WebApi.Models;
-using BarberiAppNegocio.Interface;
+﻿using BarberiAppNegocio.Interface;
 using BarberiAppNegocio.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -97,7 +96,7 @@ namespace BarberiAppNegocio.Repository
 
         public bool ValidarServicio(int id)
         {
-            return _dbContext.Servicio.Any(e => e.ServicioId == id);
+            return _dbContext.Servicio.Any(e => e.ServicioID == id);
         }
 
         public List<Servicio> ObtenerServicios()

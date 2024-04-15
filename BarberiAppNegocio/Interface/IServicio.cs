@@ -6,8 +6,8 @@ namespace BarberiAppNegocio.Interface
     {
         public List<Servicio> ObtenerListaServicios();
         public Servicio ObtenerServicioPorId(int id);
-        public void CrearServicio(Servicio servicio);
-        public void ActualizarServicio(Servicio servicio);
+        public void CrearServicio(Servicio Servicio);
+        public void ActualizarServicio(Servicio Servicio);
         public Servicio EliminarServicio(int id);
         public bool ValidarServicio(int id);
     }

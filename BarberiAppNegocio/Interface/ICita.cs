@@ -1,6 +1,6 @@
 ﻿using BarberiAppNegocio.Models;
 
-namespace BarberiApp.WebApi.Interface
+namespace BarberiAppNegocio.Interface
 {
     public interface ICita
     {

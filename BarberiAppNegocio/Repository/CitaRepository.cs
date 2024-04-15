@@ -1,9 +1,8 @@
-﻿using BarberiApp.WebApi.Interface;
-using BarberiApp.WebApi.Models;
+﻿using BarberiAppNegocio.Interface;
 using BarberiAppNegocio.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace BarberiApp.WebApi.Repository
+namespace BarberiAppNegocio.Repository
 {
     public class CitaRepository : ICita
     {

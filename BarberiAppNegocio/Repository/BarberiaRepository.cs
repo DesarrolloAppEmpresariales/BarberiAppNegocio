@@ -1,5 +1,4 @@
-﻿using BarberiApp.WebApi.Models;
-using BarberiAppNegocio.Interface;
+﻿using BarberiAppNegocio.Interface;
 using BarberiAppNegocio.Models;
 using Microsoft.EntityFrameworkCore;
 

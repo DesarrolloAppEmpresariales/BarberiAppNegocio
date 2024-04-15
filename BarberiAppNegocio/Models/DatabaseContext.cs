@@ -1,8 +1,7 @@
-﻿using BarberiApp.WebApi.Models;
-using BarberiAppNegocio.Models;
+﻿using BarberiAppNegocio.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace BarberiApp.WebApi.Models
+namespace BarberiAppNegocio.Models
 {
     public partial class DatabaseContext : DbContext
     {
