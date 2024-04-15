@@ -51,21 +51,6 @@ namespace BarberiAppNegocio.Controllers
             return await Task.FromResult(barberia);
         }
 
-        // POST: CitaController/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
         // GET: CitaController/Edit/5
         [HttpPut("{id}")]
         [Authorize(Roles = "1")]
