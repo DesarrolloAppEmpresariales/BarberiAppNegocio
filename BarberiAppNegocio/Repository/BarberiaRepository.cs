@@ -96,7 +96,7 @@ namespace BarberiAppNegocio.Repository
 
         public bool ValidarBarberia(int id)
         {
-            return _dbContext.Barberia.Any(e => e.Id == id);
+            return _dbContext.Barberia.Any(e => e.BarberiaID == id);
         }
     }
 }

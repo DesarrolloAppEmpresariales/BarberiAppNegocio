@@ -1,7 +1,7 @@
 ﻿namespace BarberiAppNegocio.Models
 {
-    public class Cita
-    {
+    public class Cita { 
+
         public int CitaID { get; set; }
         public string? Fecha { get; set; }
         public string? Hora { get; set; }

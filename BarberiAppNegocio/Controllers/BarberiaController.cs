@@ -56,7 +56,7 @@ namespace BarberiAppNegocio.Controllers
         [Authorize(Roles = "1")]
         public async Task<ActionResult<Barberia>> Put(int id, Barberia barberia)
         {
-            if (id != barberia.Id)
+            if (id != barberia.BarberiaID)
             {
                 return BadRequest();
             }

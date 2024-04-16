@@ -35,7 +35,7 @@ namespace BarberiAppNegocio.Models
             modelBuilder.Entity<Barberia>(entity =>
             {
                 entity.ToTable("Barberia");
-                entity.Property(e => e.Id).HasColumnName("Id");
+                entity.Property(e => e.BarberiaID).HasColumnName("Id");
                 entity.Property(e => e.Nombre).HasMaxLength(255).IsUnicode(false);
                 entity.Property(e => e.Direccion).HasMaxLength(255).IsUnicode(false);
                 entity.Property(e => e.Telefono).HasMaxLength(20).IsUnicode(false);
