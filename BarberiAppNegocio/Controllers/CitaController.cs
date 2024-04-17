@@ -28,7 +28,9 @@ namespace BarberiAppNegocio.Controllers
         [Authorize(Roles = "1,2,3")]
         public async Task<ActionResult<IEnumerable<Cita>>> Get()
         {
-            _logger.LogWarning("Se realiza la consulta de citas");
+            // Obtener el nombre de usuario del contexto de la solicitud HTTP
+            var userName = User.Identity.Name;
+            _logger.LogWarning($"Se realiza la consulta de citas con el usuario {userName}");
             return await Task.FromResult(_ICita.ObtenerListaCitas());
         }
 
@@ -54,6 +56,7 @@ namespace BarberiAppNegocio.Controllers
             {
                 // Obtener el nombre de usuario del contexto de la solicitud HTTP
                 var userName = User.Identity.Name;
+
 
                 // Registro de inicio de la creación de cita con el usuario que realizó la acción
                 _logger.LogWarning($"Inicio de creación de cita por el usuario {userName}: {JsonConvert.SerializeObject(cita)}");
