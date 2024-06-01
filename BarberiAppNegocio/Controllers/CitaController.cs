@@ -25,7 +25,7 @@ namespace BarberiAppNegocio.Controllers
         //Roles (1 'SU') (2 'Admin') (3 'Barbero') (4 'Cliente')    
         // GET: CitaController
         [HttpGet]
-        [Authorize(Roles = "1,2,3")]
+        [Authorize(Roles = "2,3")]
         public async Task<ActionResult<IEnumerable<Cita>>> Get()
         {
             // Obtener el nombre de usuario del contexto de la solicitud HTTP
@@ -36,7 +36,7 @@ namespace BarberiAppNegocio.Controllers
 
         // GET: CitaController/Details/5
         [HttpGet("{id}")]
-        [Authorize(Roles = "1,4")]
+        [Authorize(Roles = "2,4")]
         public async Task<ActionResult<Cita>> Get(int id)
         {
             var cita = await Task.FromResult(_ICita.ObtenerCitaPorId(id));
@@ -49,7 +49,7 @@ namespace BarberiAppNegocio.Controllers
 
         // POST: CitaController/Create
         [HttpPost]
-        [Authorize(Roles = "1,4")]
+        [Authorize(Roles = "2,4")]
         public async Task<ActionResult<Cita>> Post(Cita cita)
         {
             try
@@ -80,7 +80,7 @@ namespace BarberiAppNegocio.Controllers
 
         // GET: CitaController/Edit/5
         [HttpPut("{id}")]
-        [Authorize(Roles = "1, 4")]
+        [Authorize(Roles = "2, 4")]
         public async Task<ActionResult<Cita>> Put(int id, Cita cita)
         {
             if (id != cita.CitaID)
@@ -107,7 +107,7 @@ namespace BarberiAppNegocio.Controllers
 
         // DELETE api/employee/5
         [HttpDelete("{id}")]
-        [Authorize(Roles = "1, 4")]
+        [Authorize(Roles = "2, 4")]
         public async Task<ActionResult<Cita>> Delete(int id)
         {
             try

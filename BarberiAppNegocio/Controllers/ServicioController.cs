@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 namespace BarberiAppNegocio.Controllers
 {
     [Authorize]
-    [Route("api/Servicio")]
+    [Route("api/servicio")]
     [ApiController]
     public class ServicioController : Controller
     {

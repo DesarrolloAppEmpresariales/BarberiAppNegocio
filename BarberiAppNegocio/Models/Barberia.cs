@@ -6,11 +6,10 @@
         public string Nombre { get; set; }
         public string Direccion { get; set; }
         public string Telefono { get; set; }
-        public int StockProducto { get; set; }
-        public int CitaId { get; set; }
-        public int ServicioId { get; set; }
-        public int ProductoId { get; set; }
-        public int AdministradorNegocioId { get; set; }
-        public int EmpleadoBarberiaId { get; set; }
+        public int ServicioBarberiaId { get; set; }
+        public int ProductoBarberiaId { get; set; }
+        public int UsuarioAdminNegocio { get; set; }
+        public int EmpBarberiaId { get; set; }
+        public int AdminPlatId { get; set; }
     }
 }

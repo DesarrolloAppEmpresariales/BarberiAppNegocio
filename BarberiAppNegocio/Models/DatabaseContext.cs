@@ -39,25 +39,22 @@ namespace BarberiAppNegocio.Models
                 entity.Property(e => e.Nombre).HasMaxLength(255).IsUnicode(false);
                 entity.Property(e => e.Direccion).HasMaxLength(255).IsUnicode(false);
                 entity.Property(e => e.Telefono).HasMaxLength(20).IsUnicode(false);
-                entity.Property(e => e.StockProducto).HasColumnName("StockProducto");
-                entity.Property(e => e.CitaId).HasColumnName("CitaId").HasMaxLength(4).IsUnicode(false);
-                entity.Property(e => e.ServicioId).HasColumnName("ServicioId").HasMaxLength(4).IsUnicode(false);
-                entity.Property(e => e.ProductoId).HasColumnName("ProductoId").HasMaxLength(4).IsUnicode(false);
-                entity.Property(e => e.AdministradorNegocioId).HasColumnName("AdministradorNegocioId").HasMaxLength(4).IsUnicode(false);
-                entity.Property(e => e.EmpleadoBarberiaId).HasColumnName("EmpleadoBarberiaId").HasMaxLength(4).IsUnicode(false);
+                entity.Property(e => e.ServicioBarberiaId).HasColumnName("servicio_barberia_id");
+                entity.Property(e => e.ProductoBarberiaId).HasColumnName("producto_barberia_id").HasMaxLength(4).IsUnicode(false);
+                entity.Property(e => e.UsuarioAdminNegocio).HasColumnName("usuario_admin_negocio").HasMaxLength(4).IsUnicode(false);
+                entity.Property(e => e.EmpBarberiaId).HasColumnName("emp_barberia_id").HasMaxLength(4).IsUnicode(false);
+                entity.Property(e => e.AdminPlatId).HasColumnName("admin_plat_id").HasMaxLength(4).IsUnicode(false);
             });
 
             modelBuilder.Entity<Servicio>(entity =>
             {
-                entity.ToTable("Servicios");
+                entity.ToTable("Servicio");
                 entity.Property(e => e.ServicioID).HasColumnName("Id");
                 entity.Property(e => e.Fecha).HasMaxLength(10).IsUnicode(false);
-                entity.Property(e => e.Hora).HasMaxLength(10).IsUnicode(false);
                 entity.Property(e => e.Estado).HasMaxLength(20).IsUnicode(false);
                 entity.Property(e => e.Tipo).HasMaxLength(50).IsUnicode(false);
                 entity.Property(e => e.Estado).HasMaxLength(20).IsUnicode(false);
                 entity.Property(e => e.Precio).HasMaxLength(20).IsUnicode(false);
-                entity.Property(e => e.BarberiaId).HasColumnName("Barberia_Id").HasMaxLength(5).IsUnicode(false);
             });
 
 

@@ -20,10 +20,10 @@ namespace BarberiAppNegocio.Controllers
             _IBarberia = IBarberia;
         }
 
-        //Roles (1 'SU') (2 'Admin') (3 'Barbero') (4 'Cliente')    
+        //Roles (2 'SU') (2 'Admin') (3 'Barbero') (4 'Cliente')    
         // GET: CitaController
         [HttpGet]
-        [Authorize(Roles = "1")]
+        [Authorize(Roles = "2, 3, 4, 5")]
         public async Task<ActionResult<IEnumerable<Barberia>>> Get()
         {
             return await Task.FromResult(_IBarberia.ObtenerListaBarberias());

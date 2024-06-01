@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34701.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarberiAppNegocio", "BarberiAppNegocio\BarberiAppNegocio.csproj", "{2C071D68-D71A-4596-BB2D-BB84D0D4D98E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BarberiAppNegocio", "BarberiAppNegocio\BarberiAppNegocio.csproj", "{2C071D68-D71A-4596-BB2D-BB84D0D4D98E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BDDNegocio", "BDDNegocio\BDDNegocio.csproj", "{F6B6E322-09AB-4007-AFF9-7DD35CC723B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{2C071D68-D71A-4596-BB2D-BB84D0D4D98E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C071D68-D71A-4596-BB2D-BB84D0D4D98E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C071D68-D71A-4596-BB2D-BB84D0D4D98E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6B6E322-09AB-4007-AFF9-7DD35CC723B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6B6E322-09AB-4007-AFF9-7DD35CC723B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6B6E322-09AB-4007-AFF9-7DD35CC723B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6B6E322-09AB-4007-AFF9-7DD35CC723B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
