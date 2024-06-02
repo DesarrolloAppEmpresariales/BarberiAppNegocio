@@ -84,11 +84,11 @@ namespace BDDNegocio.Features
         [Xunit.SkippableFactAttribute(DisplayName="Obtener la lista de servicio con un token valido")]
         [Xunit.TraitAttribute("FeatureTitle", "Servicio")]
         [Xunit.TraitAttribute("Description", "Obtener la lista de servicio con un token valido")]
-        [Xunit.TraitAttribute("Category", "ListaBarberias")]
+        [Xunit.TraitAttribute("Category", "ListaServicios")]
         public virtual void ObtenerLaListaDeServicioConUnTokenValido()
         {
             string[] tagsOfScenario = new string[] {
-                    "ListaBarberias"};
+                    "ListaServicios"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Obtener la lista de servicio con un token valido", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 6

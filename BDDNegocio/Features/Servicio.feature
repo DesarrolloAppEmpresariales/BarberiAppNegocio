@@ -2,7 +2,7 @@
 Garantizar el correcto funcionamiento de los servicios para la entidad Servicio
 en la api de Negocio
 
-@ListaBarberias
+@ListaServicios
 Scenario: Obtener la lista de servicio con un token valido
 	Given que la API esta disponible para servicio
 	And tengo un token valido para servicio
